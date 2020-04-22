@@ -21,7 +21,7 @@
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body> 7
 <!-- Preloader -->
     <div class="preloader">
         <div class="cssload-speeding-wheel"></div>
