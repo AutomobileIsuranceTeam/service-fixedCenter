@@ -21,7 +21,7 @@
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body> 7
+<body> 
 <!-- Preloader -->
     <div class="preloader">
         <div class="cssload-speeding-wheel"></div>
@@ -69,23 +69,18 @@
                         <a href="dashboard.html" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i> 定损中心</a>
                     </li>
                     <li>
-                        <a href="profile.html" class="waves-effect"><i class="ti-user fa-fw"></i>Profile</a>
+                        <a href="profile.html" class="waves-effect"><i class="ti-user fa-fw"></i>定损项目</a>
                     </li>
                     <li>
-                        <a href="basic-table.html" class="waves-effect"><i class="ti-layout fa-fw"></i>Basic-Table</a>
+                        <a href="basic-table.html" class="waves-effect"><i class="ti-layout fa-fw"></i>未处理案件</a>
                     </li>
                     <li>
-                        <a href="themifyicon.html" class="waves-effect"><i class="ti-face-smile fa-fw"></i> Icons</a>
+                        <a href="themifyicon.html" class="waves-effect"><i class="ti-face-smile fa-fw"></i> 已定损项目</a>
                     </li>
                     <li>
-                        <a href="map-google.html" class="waves-effect"><i class="ti-location-pin fa-fw"></i> Google Map</a>
+                        <a href="map-google.html" class="waves-effect"><i class="ti-location-pin fa-fw"></i> 驳回案件</a>
                     </li>
-                    <li>
-                        <a href="blank.html" class="waves-effect"><i class="ti-files fa-fw"></i> Blank Page</a>
-                    </li>
-                    <li>
-                        <a href="404.html" class="waves-effect"><i class="ti-info fa-fw"></i> Error 404</a>
-                    </li>
+                   
                 </ul>
                 <div class="center p-20">
                     <span class="hide-menu"><a href="#"  class="btn btn-info btn-block btn-rounded waves-effect waves-light">Upgrade to Pro</a></span>
