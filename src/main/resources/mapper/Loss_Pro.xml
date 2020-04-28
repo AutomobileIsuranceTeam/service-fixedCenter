@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sz.zl.dao.Loss_ProDao">
+
+	<insert id="add" parameterType="cn.sz.zl.pojo.Loss_Pro">	
+		insert into loss_pro(lossprojectid,reportid,policyid,lossmoney,report_status,remarks) 
+			values(${lossprojectid},${reportid},${policyid},${lossmoney},#{report_status},#{remarks})
+
+	</insert>
+	
+	<update id="updateLoss" parameterType="cn.sz.zl.pojo.Loss_Pro">
+		
+	</update>
+	
+	<select id="findbyId" parameterType="cn.sz.zl.pojo.Loss_Pro" resultMap="cn.sz.zl.pojo.Loss_Pro"">
+		select lossprojectid,reportid,policyid,lossmoney,report_status,remarks where lossprojectid=${lossprojectid}
+	</select>
+</mapper>
