@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.sz.zl.pojo.Loss_Pro;
@@ -54,7 +55,7 @@ public class FixedCenterController {
 	//单个查询定损项目（按ID查询）
 	@ResponseBody
 	@RequestMapping(value="/findbyid",method=RequestMethod.POST)
-	public Loss_Pro findbyid(@RequestBody Integer id) {
+	public Loss_Pro findbyid(@RequestParam Integer id) {
 		if(proservice.findbyId(id).equals(null)) {
 			return null;
 		}
@@ -64,11 +65,19 @@ public class FixedCenterController {
 	//按照项目状态查询
 	@ResponseBody
 	@RequestMapping(value="/findbytype",method=RequestMethod.POST)
-	public List<Loss_Pro> findbytype(@RequestBody String type) {
+	public List<Loss_Pro> findbytype(@RequestParam String type) {
 		if(proservice.findbytype(type).equals(null)) {
 			return null;
 		}
 		return proservice.findbytype(type);
 	}
 	
+	
+	//查询未处理案件
+	@ResponseBody
+	@RequestMapping(value="/findbymoney",method=RequestMethod.POST)
+	public List<Loss_Pro> findbymoney(@RequestBody Loss_Pro pro){
+		return  proservice.findbymoney(pro);
+	}
+
 }

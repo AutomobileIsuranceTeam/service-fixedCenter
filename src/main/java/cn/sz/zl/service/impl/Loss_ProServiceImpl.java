@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import cn.sz.zl.dao.Loss_ProDao;
 import cn.sz.zl.pojo.Loss_Pro;
+import cn.sz.zl.pojo.Up_Loss;
 import cn.sz.zl.service.Loss_ProService;
 
 @Service
@@ -56,4 +57,16 @@ public class Loss_ProServiceImpl implements Loss_ProService {
 		}
 		return prodao.findbytype(type);
 	}
+
+	@Override
+	public List<Up_Loss> findUp() {
+		
+		return prodao.findUp();
+	}
+
+	@Override
+	public List<Loss_Pro> findbymoney(Loss_Pro Losspro) {
+		
+		return prodao.findbymoney(Losspro);
+	}	
 }

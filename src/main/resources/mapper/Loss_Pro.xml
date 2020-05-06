@@ -4,16 +4,47 @@
 <mapper namespace="cn.sz.zl.dao.Loss_ProDao">
 
 	<insert id="add" parameterType="cn.sz.zl.pojo.Loss_Pro">	
-		insert into loss_pro(lossprojectid,reportid,policyid,lossmoney,report_status,remarks) 
-			values(${lossprojectid},${reportid},${policyid},${lossmoney},#{report_status},#{remarks})
-
+		insert into loss_pro(lossprojectid,reportid,policyid,losspeople,losscar,report_status,remarks) 
+			values(${lossprojectid},${reportid},${policyid},${losspeople},${losscar},#{report_status},#{remarks})
 	</insert>
 	
 	<update id="updateLoss" parameterType="cn.sz.zl.pojo.Loss_Pro">
-		
+		update set loss_pro 
+			 losspeople=${losspeople},losscar=${losscar},report_status=#{report_status},remarks=#{remarks}
+		where reportid=${reportid}
 	</update>
 	
-	<select id="findbyId" parameterType="cn.sz.zl.pojo.Loss_Pro" resultMap="cn.sz.zl.pojo.Loss_Pro"">
-		select lossprojectid,reportid,policyid,lossmoney,report_status,remarks where lossprojectid=${lossprojectid}
+	<select id="findAll" resultMap="cn.sz.zl.pojo.Loss_Pro">
+		select 
+			lossprojectid,reportid,policyid,losspeople,losscar,report_status,remarks
+		from loss_pro
 	</select>
+
+	<select id="findbyId" parameterType="cn.sz.zl.pojo.Loss_Pro" resultMap="cn.sz.zl.pojo.Loss_Pro">
+	 select
+		 lossprojectid,reportid,policyid,losspeople,losscar,report_status,remarks 
+	 from loss_pro
+		  where lossprojectid=${lossprojectid}
+	</select>
+	
+	<select id="findbytype" parameterType="cn.sz.zl.pojo.Loss_Pro" resultMap="cn.sz.zl.pojo.Loss_Pro">
+		select lossprojectid,reportid,policyid,losspeople,losscar,report_status,remarks 
+		from loss_pro 
+		where report_status=#{report_status}
+	</select>
+	
+	<select id="findUp" resultMap="cn.sz.zl.pojo.Up_Loss">
+		select 
+			lossid,reportid,accidentid,injuredid,car_photo,people_photo,report_info,responsibility 
+		from up_loss 
+		where type=${type};
+	</select>
+	
+	<select id="findbytype" parameterType="cn.sz.zl.pojo.Loss_Pro" resultMap="cn.sz.zl.pojo.Loss_Pro">
+		select 
+			lossprojectid,reportid,policyid,losspeople,losscar,report_status,remarks
+		from loss_pro 
+		where losspeople=${losspeople} and losscar=${losscar}
+	</select>
+	
 </mapper>

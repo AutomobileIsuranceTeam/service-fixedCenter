@@ -7,7 +7,8 @@ public class Loss_Pro implements Serializable{
 	private int lossprojectid;
 	private int reportid;
 	private int policyid;
-	private int lossmoney;
+	private int losspeople;
+	private int losscar;
 	private String report_status;
 	private String remarks;
 	
@@ -29,11 +30,17 @@ public class Loss_Pro implements Serializable{
 	public void setPolicyid(int policyid) {
 		this.policyid = policyid;
 	}
-	public int getLossmoney() {
-		return lossmoney;
+	public int getLosspeople() {
+		return losspeople;
 	}
-	public void setLossmoney(int lossmoney) {
-		this.lossmoney = lossmoney;
+	public void setLosspeople(int losspeople) {
+		this.losspeople = losspeople;
+	}
+	public int getLosscar() {
+		return losscar;
+	}
+	public void setLosscar(int losscar) {
+		this.losscar = losscar;
 	}
 	public String getReport_status() {
 		return report_status;
