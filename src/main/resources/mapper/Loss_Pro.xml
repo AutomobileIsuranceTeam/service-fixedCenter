@@ -32,19 +32,14 @@
 		from loss_pro 
 		where report_status=#{report_status}
 	</select>
-	
-	<select id="findUp" resultMap="cn.sz.zl.pojo.Up_Loss">
-		select 
-			lossid,reportid,accidentid,injuredid,car_photo,people_photo,report_info,responsibility 
-		from up_loss 
-		where type=${type};
-	</select>
-	
-	<select id="findbytype" parameterType="cn.sz.zl.pojo.Loss_Pro" resultMap="cn.sz.zl.pojo.Loss_Pro">
+
+	<select id="findbymoney" parameterType="cn.sz.zl.pojo.Loss_Pro" resultMap="cn.sz.zl.pojo.Loss_Pro">
 		select 
 			lossprojectid,reportid,policyid,losspeople,losscar,report_status,remarks
 		from loss_pro 
 		where losspeople=${losspeople} and losscar=${losscar}
 	</select>
+	
+	
 	
 </mapper>

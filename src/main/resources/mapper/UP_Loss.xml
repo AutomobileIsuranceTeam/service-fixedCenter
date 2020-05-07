@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sz.zl.dao.UpLossDao">
+
+	<select id="findUp" resultMap="cn.sz.zl.pojo.Up_Loss">
+		select 
+			lossid,reportid,accidentid,injuredid,car_photo,people_photo,report_info,responsibility 
+		from up_loss 
+		where type=${type};
+	</select>
+
+</mapper>

@@ -17,7 +17,6 @@ public interface Loss_ProService {
 	
 	public List<Loss_Pro> findbytype(String type);//通过状态查询，及是否为驳回状态
 	
-	public List<Up_Loss> findUp();
 	
 	public List<Loss_Pro> findbymoney(Loss_Pro Losspro );//查询未处理项目
 	

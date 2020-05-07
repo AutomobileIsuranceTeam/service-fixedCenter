@@ -20,7 +20,7 @@ public class SpringMVCConfig {
 	public MapperScannerConfigurer scannerConfigur() {
 		MapperScannerConfigurer conf=new MapperScannerConfigurer();
 		conf.setSqlSessionFactoryBeanName("sqlSessionFactory");
-		conf.setBasePackage("cn.sz.lh.dao");
+		conf.setBasePackage("cn.sz.zl.dao");
 		return conf;
 	}
 	

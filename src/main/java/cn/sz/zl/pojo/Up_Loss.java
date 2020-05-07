@@ -12,11 +12,12 @@ public class Up_Loss implements Serializable {
 	private String people_photo;
 	private String report_info;
 	private String responsibility;
-	private Integer type;
-	public Integer getType() {
+	private String type;
+
+	public String getType() {
 		return type;
 	}
-	public void setType(Integer type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 	public BigInteger getLossid() {
