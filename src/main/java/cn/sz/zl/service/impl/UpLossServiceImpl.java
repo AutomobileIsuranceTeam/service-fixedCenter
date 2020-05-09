@@ -1,5 +1,6 @@
 package cn.sz.zl.service.impl;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +17,9 @@ public class UpLossServiceImpl implements UplossService {
 	private UpLossDao updao;
 	
 	@Override
-	public List<Up_Loss> findUp() {
+	public List<Up_Loss> findUp(BigInteger loss) {
 		
-		return updao.findUp();
+		return updao.findUp(loss);
 	}
 
 }

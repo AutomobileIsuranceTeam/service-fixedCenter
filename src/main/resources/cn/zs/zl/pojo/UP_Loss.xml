@@ -5,9 +5,9 @@
 
 	<select id="findUp" resultMap="cn.sz.zl.pojo.Up_Loss">
 		select 
-			lossid,reportid,accidentid,injuredid,car_photo,people_photo,report_info,responsibility 
+			lossid,reportid,car_photo,people_photo,report_info,responsibility,status 
 		from up_loss 
-		where type=${type};
+		where status=#{status}
 	</select>
 
 </mapper>

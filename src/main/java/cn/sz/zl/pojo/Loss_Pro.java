@@ -1,11 +1,12 @@
 package cn.sz.zl.pojo;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 
 public class Loss_Pro implements Serializable{
 
 	private int lossprojectid;
-	private int reportid;
+	private BigInteger reportid;
 	private int policyid;
 	private int losspeople;
 	private int losscar;
@@ -18,10 +19,10 @@ public class Loss_Pro implements Serializable{
 	public void setLossprojectid(int lossprojectid) {
 		this.lossprojectid = lossprojectid;
 	}
-	public int getReportid() {
+	public BigInteger getReportid() {
 		return reportid;
 	}
-	public void setReportid(int reportid) {
+	public void setReportid(BigInteger reportid) {
 		this.reportid = reportid;
 	}
 	public int getPolicyid() {
@@ -54,7 +55,5 @@ public class Loss_Pro implements Serializable{
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
-	
-	
-	
+
 }

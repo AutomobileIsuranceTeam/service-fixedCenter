@@ -6,19 +6,17 @@ import java.math.BigInteger;
 public class Up_Loss implements Serializable {
 	private BigInteger lossid;	
 	private BigInteger reportid;
-	private BigInteger accidentid;
-	private BigInteger injuredid;
 	private String car_photo;
 	private String people_photo;
 	private String report_info;
 	private String responsibility;
-	private String type;
+	private String status;
 
-	public String getType() {
-		return type;
+	public String getStatus() {
+		return status;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	public BigInteger getLossid() {
 		return lossid;
@@ -32,18 +30,7 @@ public class Up_Loss implements Serializable {
 	public void setReportid(BigInteger reportid) {
 		this.reportid = reportid;
 	}
-	public BigInteger getAccidentid() {
-		return accidentid;
-	}
-	public void setAccidentid(BigInteger accidentid) {
-		this.accidentid = accidentid;
-	}
-	public BigInteger getInjuredid() {
-		return injuredid;
-	}
-	public void setInjuredid(BigInteger injuredid) {
-		this.injuredid = injuredid;
-	}
+
 	public String getCar_photo() {
 		return car_photo;
 	}
@@ -69,4 +56,6 @@ public class Up_Loss implements Serializable {
 	public void setResponsibility(String responsibility) {
 		this.responsibility = responsibility;
 	}
+	
 }
+
